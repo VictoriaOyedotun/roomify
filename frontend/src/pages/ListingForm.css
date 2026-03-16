@@ -1,0 +1,46 @@
+.listing-form-page h1 {
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+.listing-form {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.listing-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.listing-form input,
+.listing-form select,
+.listing-form textarea {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+.listing-form textarea {
+  resize: vertical;
+}
+
+.ideal-profile-link {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.ideal-profile-link a {
+  color: #2563eb;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}

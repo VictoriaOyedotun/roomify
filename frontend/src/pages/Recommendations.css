@@ -1,0 +1,93 @@
+.recommendations-page h1 {
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+}
+
+.intro {
+  color: #64748b;
+  margin-bottom: 1.5rem;
+}
+
+.recommendations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rec-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.15s;
+}
+
+.rec-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.rec-score {
+  flex-shrink: 0;
+  width: 56px;
+  text-align: center;
+  padding: 0.5rem;
+  background: #eff6ff;
+  border-radius: 8px;
+}
+
+.score-value {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+.score-label {
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+.rec-content {
+  flex: 1;
+}
+
+.rec-content .badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.25rem;
+}
+
+.rec-content .badge.NEED_ROOMMATE {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.rec-content .badge.LOOKING_FOR_ROOM {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.rec-content h3 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: #1e293b;
+}
+
+.rec-content .location,
+.rec-content .rent {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.rec-content .posted-by {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-top: 0.25rem;
+}

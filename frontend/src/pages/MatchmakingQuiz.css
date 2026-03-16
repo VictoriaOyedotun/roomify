@@ -1,0 +1,84 @@
+.quiz-page {
+  max-width: 560px;
+}
+
+.quiz-page h1 {
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+}
+
+.quiz-intro {
+  color: #64748b;
+  margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #2563eb;
+  transition: width 0.2s;
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 1rem;
+}
+
+.quiz-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  margin-bottom: 1rem;
+}
+
+.quiz-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #334155;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.option:hover {
+  background: #f8fafc;
+}
+
+.option input:checked + span {
+  font-weight: 500;
+}
+
+.quiz-card input[type="text"] {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+.quiz-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}

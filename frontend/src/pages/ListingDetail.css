@@ -1,0 +1,60 @@
+.listing-detail {
+  max-width: 640px;
+}
+
+.listing-detail .badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.listing-detail .badge.NEED_ROOMMATE {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.listing-detail .badge.LOOKING_FOR_ROOM {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.listing-detail h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+}
+
+.listing-detail .location,
+.listing-detail .rent {
+  color: #64748b;
+  margin-bottom: 0.25rem;
+}
+
+.listing-detail .description,
+.listing-detail .amenities {
+  margin-top: 1.5rem;
+}
+
+.listing-detail .description h2,
+.listing-detail .amenities h2 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #334155;
+}
+
+.listing-detail .posted-by {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.listing-detail .actions {
+  margin-top: 1.5rem;
+}
+
+.contact-cta {
+  font-size: 0.9rem;
+  color: #64748b;
+}
