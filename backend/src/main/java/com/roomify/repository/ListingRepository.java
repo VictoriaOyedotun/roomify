@@ -16,6 +16,8 @@ public interface ListingRepository extends JpaRepository<Listing, Long> {
 
     Page<Listing> findByStatus(ListingStatus status, Pageable pageable);
 
+    List<Listing> findByStatusAndListingType(ListingStatus status, ListingType listingType);
+
     Page<Listing> findByStatusAndListingType(ListingStatus status, ListingType listingType, Pageable pageable);
 
     List<Listing> findByCreatedById(Long userId);
