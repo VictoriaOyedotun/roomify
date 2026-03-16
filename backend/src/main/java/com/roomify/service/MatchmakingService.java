@@ -156,4 +156,18 @@ public class MatchmakingService {
         }
         return result;
     }
+
+    /**
+     * Get compatibility score for the current user and the given listing (for on-demand "Check compatibility").
+     * Returns empty if listing has no ideal profile or user has not taken the quiz.
+     */
+    public Optional<Integer> getCompatibilityScoreForListing(Long listingId) {
+        User user = userService.getCurrentUserEntity();
+        List<MatchAnswer> listingAnswers = answerRepository.findByEntityTypeAndEntityId(AnswerEntityType.LISTING, listingId);
+        if (listingAnswers.isEmpty()) return Optional.empty();
+        List<MatchAnswer> userAnswers = answerRepository.findByEntityTypeAndEntityId(AnswerEntityType.USER, user.getId());
+        if (userAnswers.isEmpty()) return Optional.empty();
+        int score = computeCompatibility(user.getId(), listingId);
+        return Optional.of(score);
+    }
 }

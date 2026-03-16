@@ -37,7 +37,7 @@ export default function CreateListing() {
     };
     try {
       const created = await listingsApi.create(payload);
-      navigate(`/listings/${created.id}`);
+      navigate(`/listings/${created.id}?prompt=ideal`);
     } catch (err) {
       setError(err.message || 'Failed to create listing');
     }

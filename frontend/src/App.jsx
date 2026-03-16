@@ -12,6 +12,7 @@ import EditListing from './pages/EditListing';
 import MatchmakingQuiz from './pages/MatchmakingQuiz';
 import Recommendations from './pages/Recommendations';
 import Profile from './pages/Profile';
+import Messages from './pages/Messages';
 
 function ProtectedRoute({ children }) {
   const { isAuthenticated, loading } = useAuth();
@@ -34,6 +35,8 @@ export default function App() {
         <Route path="listings/:id/edit" element={<ProtectedRoute><EditListing /></ProtectedRoute>} />
         <Route path="matchmaking" element={<ProtectedRoute><MatchmakingQuiz /></ProtectedRoute>} />
         <Route path="recommendations" element={<ProtectedRoute><Recommendations /></ProtectedRoute>} />
+        <Route path="messages" element={<ProtectedRoute><Messages /></ProtectedRoute>} />
+        <Route path="messages/:id" element={<ProtectedRoute><Messages /></ProtectedRoute>} />
         <Route path="profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
       </Route>
     </Routes>

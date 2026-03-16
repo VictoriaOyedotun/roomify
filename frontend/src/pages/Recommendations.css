@@ -3,6 +3,10 @@
   color: #1e293b;
 }
 
+.recommendations-page .empty-state {
+  color: #64748b;
+}
+
 .intro {
   color: #64748b;
   margin-bottom: 1.5rem;

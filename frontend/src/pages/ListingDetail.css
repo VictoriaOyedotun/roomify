@@ -54,6 +54,52 @@
   margin-top: 1.5rem;
 }
 
+.ideal-profile-banner {
+  position: relative;
+  padding: 1rem 2.5rem 1rem 1rem;
+  margin-bottom: 1rem;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+}
+
+.ideal-profile-banner p {
+  margin: 0 0 0.5rem 0;
+  color: #1e293b;
+}
+
+.ideal-profile-banner .btn-sm {
+  font-size: 0.875rem;
+  padding: 0.35rem 0.75rem;
+}
+
+.banner-dismiss {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.banner-dismiss:hover {
+  color: #1e293b;
+}
+
+.compatibility-section {
+  margin-top: 1rem;
+}
+
+.compatibility-result {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #475569;
+}
+
 .contact-cta {
   font-size: 0.9rem;
   color: #64748b;

@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/matchmaking")
@@ -34,5 +35,12 @@ public class MatchmakingController {
     @GetMapping("/recommendations")
     public ResponseEntity<List<RecommendationResponse>> getRecommendations() {
         return ResponseEntity.ok(matchmakingService.getRecommendations());
+    }
+
+    @GetMapping("/score")
+    public ResponseEntity<Map<String, Integer>> getScore(@RequestParam Long listingId) {
+        return matchmakingService.getCompatibilityScoreForListing(listingId)
+                .map(score -> ResponseEntity.ok(Map.of("compatibilityScore", score)))
+                .orElse(ResponseEntity.ok(Map.of()));
     }
 }
