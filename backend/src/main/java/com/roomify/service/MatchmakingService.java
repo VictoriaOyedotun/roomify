@@ -5,6 +5,7 @@ import com.roomify.dto.MatchQuestionResponse;
 import com.roomify.dto.RecommendationResponse;
 import com.roomify.dto.SubmitAnswersRequest;
 import com.roomify.repository.*;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -76,7 +77,7 @@ public class MatchmakingService {
 
     private void recomputeScoresForUser(Long userId) {
         scoreRepository.deleteByUserId(userId);
-        List<Listing> activeListings = listingRepository.findByStatusAndListingType(ListingStatus.ACTIVE, ListingType.NEED_ROOMMATE);
+        List<Listing> activeListings = listingRepository.findByStatusAndListingType(ListingStatus.ACTIVE, ListingType.NEED_ROOMMATE, Pageable.unpaged()).getContent();
         for (Listing listing : activeListings) {
             List<MatchAnswer> listingAnswers = answerRepository.findByEntityTypeAndEntityId(AnswerEntityType.LISTING, listing.getId());
             if (listingAnswers.isEmpty()) continue;
