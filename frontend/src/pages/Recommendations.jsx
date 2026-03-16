@@ -26,8 +26,8 @@ export default function Recommendations() {
       <h1>Your matches</h1>
       <p className="intro">Listings ranked by compatibility with your quiz answers.</p>
       {list.length === 0 ? (
-        <p>
-          Complete the <Link to="/matchmaking">matchmaking quiz</Link> to get personalized recommendations.
+        <p className="empty-state">
+          Complete the <Link to="/matchmaking">matchmaking quiz</Link> to get personalized recommendations and see your match % for each listing.
         </p>
       ) : (
         <div className="recommendations-list">

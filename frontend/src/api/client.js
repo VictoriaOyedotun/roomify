@@ -58,4 +58,17 @@ export const matchmaking = {
   getQuestions: () => api('/api/matchmaking/questions'),
   submitAnswers: (data) => api('/api/matchmaking/answers', { method: 'POST', body: JSON.stringify(data) }),
   getRecommendations: () => api('/api/matchmaking/recommendations'),
+  getScore: (listingId) => api(`/api/matchmaking/score?listingId=${encodeURIComponent(listingId)}`),
+};
+
+export const chat = {
+  getOrCreateConversation: (listingId) =>
+    api('/api/chat/conversations', { method: 'POST', body: JSON.stringify({ listingId }) }),
+  getConversations: () => api('/api/chat/conversations'),
+  getMessages: (conversationId) => api(`/api/chat/conversations/${conversationId}/messages`),
+  sendMessage: (conversationId, body) =>
+    api(`/api/chat/conversations/${conversationId}/messages`, {
+      method: 'POST',
+      body: JSON.stringify({ body }),
+    }),
 };

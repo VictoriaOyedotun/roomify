@@ -109,7 +109,7 @@ export default function EditListing() {
         </label>
         {listing?.listingType === 'NEED_ROOMMATE' && (
           <p className="ideal-profile-link">
-            <Link to={`/matchmaking?listingId=${id}`}>Set ideal roommate profile</Link> (same quiz) to get better matches.
+            <Link to={`/matchmaking?listingId=${id}`}>Set ideal roommate profile</Link> (optional – listings with a profile show a match % to users who take the quiz).
           </p>
         )}
         <div className="form-actions">

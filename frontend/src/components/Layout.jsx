@@ -21,6 +21,7 @@ export default function Layout() {
             <>
               <Link to="/matchmaking">Matchmaking</Link>
               <Link to="/recommendations">My Matches</Link>
+              <Link to="/messages">Messages</Link>
               <Link to="/my-listings">My Listings</Link>
               <Link to="/listings/new">Post Listing</Link>
               <Link to="/profile">Profile</Link>
