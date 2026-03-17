@@ -13,10 +13,11 @@
     @apply text-primary-600 hover:text-primary-700 transition-colors;
   }
   button {
-    @apply cursor-pointer font-inherit;
+    @apply cursor-pointer;
+    font: inherit;
   }
   input, textarea, select {
-    @apply font-inherit;
+    font: inherit;
   }
 }
 
