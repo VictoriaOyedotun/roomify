@@ -13,10 +13,18 @@ import MatchmakingQuiz from './pages/MatchmakingQuiz';
 import Recommendations from './pages/Recommendations';
 import Profile from './pages/Profile';
 import Messages from './pages/Messages';
+import Dashboard from './pages/Dashboard';
 
 function ProtectedRoute({ children }) {
   const { isAuthenticated, loading } = useAuth();
-  if (loading) return <div className="loading">Loading...</div>;
+  if (loading) return (
+    <div className="min-h-[60vh] flex items-center justify-center">
+      <div className="animate-pulse flex flex-col items-center gap-4">
+        <div className="w-12 h-12 rounded-xl bg-primary-100" />
+        <p className="text-slate-500 text-sm">Loading...</p>
+      </div>
+    </div>
+  );
   if (!isAuthenticated) return <Navigate to="/login" replace />;
   return children;
 }
@@ -37,6 +45,7 @@ export default function App() {
         <Route path="recommendations" element={<ProtectedRoute><Recommendations /></ProtectedRoute>} />
         <Route path="messages" element={<ProtectedRoute><Messages /></ProtectedRoute>} />
         <Route path="messages/:id" element={<ProtectedRoute><Messages /></ProtectedRoute>} />
+        <Route path="dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
         <Route path="profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
       </Route>
     </Routes>
